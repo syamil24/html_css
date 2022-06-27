@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<script>
+    var a = 1
+    var b = "1"
+
+    if(a==b){
+        document.write("a==b is true")
+        document.write("<br>")
+    }
+
+    if(a===b){
+        document.write("a===b is true")
+        document.write("<br>")
+    }
+
+    document.write("1==1 " + (1==1))
+    document.write("<br>")
+    document.write("1===1 " + (1==="1"))
+    document.write("<br>")
+    document.write("1!=1 " + (1!=1))
+    document.write("<br>")
+    document.write("1!==1 " + (1!=='1'))
+    document.write("<br>")
+
+    var ary = [1,2,3,4,5,6]
+
+    for(var a in ary){
+        document.write(ary[a] + "<br>")
+    }
+
+    const user = {
+        id: 1,
+        firstname : "ABC",
+        lastName : "XYZ",
+        age : 30,
+    }
+
+    for(var a in user){
+        document.write(user[a]+ "<br>" )
+    }
+
+    var text = "This is text"
+    document.write(text.length+ "<br>" )
+
+    var substring = text.slice(5,10);
+    document.write(substring + "<br>" )
+    document.write(text.slice(3, -5) + "<br>" )
+    document.write(text.slice(2) + "<br>" )
+
+    document.write("Hi " .concat("How Are You") + "<br>" )
+    var text2 = "   Hi       Hello"
+    document.write(text2 + "<br>" )
+    //text2.trim()
+    document.write(text2 + "<br>" )
+</script>
+
+</html>
