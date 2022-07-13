@@ -17,5 +17,5 @@ jobs:
         uses: iryanbell/scc-docker-action@v1.0.2
         with:
           args: |
-            ${{ github.workspace }} -i js,go,html,css
+            /home/runner/work/html_css/html_css -i js,go,html,css
       - run: echo "${{ steps.scc.outputs.scc }}"
