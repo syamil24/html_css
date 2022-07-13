@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  scc_job:
+    runs-on: ubuntu-latest
+    name: A job to count the lines of code.
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Get the lines of code.
+        id: scc
+        uses: iryanbell/scc-docker-action@v1.0.2
+        with:
+          args: |
+            ${{ github.workspace }} -i js,go,html,css
+      - run: echo "${{ steps.scc.outputs.scc }}"
