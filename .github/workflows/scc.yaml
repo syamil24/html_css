@@ -19,3 +19,4 @@ jobs:
           args: |
             /home/runner/work/html_css/html_css -i js,go,html,css
       - run: echo "${{ steps.scc.outputs.scc }}"
+# Added Comments in workflow
